@@ -2,17 +2,18 @@
 Documentation     Simple example using SeleniumLibrary.
 Library           SeleniumLibrary
 
+
 *** Variables ***
-${LOGIN_URL}      https://the-internet.herokuapp.com/login
-${BROWSER}        firefox
-${EXECUTE_PATH}
+${LOGIN_URL}  https://the-internet.herokuapp.com/login
+${BROWSER}  firefox
 
 *** Test Cases ***
 Valid Login
     [Documentation]     Google Test
     [Tags]  regression
-    Open Browser    https://www.google.com/     firefox
+    Open Browser  ${LOGIN_URL}  chrome
     Close Browser
+
         
 *** Keywords ***
 Open Browser To Login Page
