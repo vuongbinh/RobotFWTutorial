@@ -6,9 +6,10 @@ Library                 SeleniumLibrary
 *** Variables ***
 ${BASE_URL}         https://the-internet.herokuapp.com
 ${LOGIN_URL}        ${BASE_URL}/login
-${BROWSER}          headlesschrome
+${BROWSER}          chrome
 ${VALID_USER}       tomsmith
 ${VALID_PASSWORD}   SuperSecretPassword!
+
 
 *** Keywords ***
 Test case login template

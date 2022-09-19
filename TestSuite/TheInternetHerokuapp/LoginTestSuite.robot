@@ -7,9 +7,6 @@ Test Template           Test case login template
 Resource                resource.robot
 
 *** Test Cases ***               USERNAME         PASSWORD              IS Valid?
-Valid Login                      ${VALID_USER}    ${VALID_PASSWORD}     ${TRUE}
-    [Tags]              Functionality
-    [Documentation]     This is valid test cases to verify login function
 Invalid Username                 invalid          ${VALID_PASSWORD}     ${FALSE}
     [Tags]              Functionality
     [Documentation]     This is invalid test cases to verify login function
@@ -28,7 +25,9 @@ Empty Password                   ${VALID_USER}    ${EMPTY}              ${FALSE}
 Empty Username And Password      ${EMPTY}         ${EMPTY}              ${FALSE}
     [Tags]              Functionality
     [Documentation]     This is invalid test cases to verify login function
-
+Valid Login                      ${VALID_USER}    ${VALID_PASSWORD}     ${TRUE}
+    [Tags]              Functionality
+    [Documentation]     This is valid test cases to verify login function
 
 
 
