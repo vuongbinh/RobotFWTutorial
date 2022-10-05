@@ -13,11 +13,8 @@ Login Template
     Input email          ${email}
     Input password       ${password}
     Submit Credential
-    IF    ${is_valid} == ${True}
-        Login should success
-    ELSE
-        Login should failed
-    END
+    Run Keyword If    ${is_valid} == ${True}  Login should success
+    ...    ELSE    Login should failed
 
 Open HOMEPAGE
     Open Browser                    ${HOME_PAGE}        ${BROWSER}
