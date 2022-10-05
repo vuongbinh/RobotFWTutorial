@@ -1,5 +1,8 @@
 *** Settings ***
-Library                     SeleniumLibrary
+Library      SeleniumLibrary
+Library      RequestsLibrary
+Library      JSONLibrary
+Library      Collections
 
 *** Variables ***
 ${HOME_PAGE}                http://automationpractice.com/index.php
@@ -20,7 +23,7 @@ Open HOMEPAGE
     Open Browser                    ${HOME_PAGE}        ${BROWSER}
     Maximize Browser Window
     Wait Until Element Is Visible   slider_row
-    Element Should Be Visible       slider_row
+    Page Should Contain       slider_row
 Goto Login page
     Go To                           ${HOME_PAGE}?controller=authentication
     Wait Until Element Is Visible   //div[@id='center_column']
