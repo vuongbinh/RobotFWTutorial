@@ -11,3 +11,6 @@ log.html
 report.html
 output.xml
 *.log
+*.png
+.\Evidences
+*.xml
